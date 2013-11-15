@@ -1,50 +1,48 @@
 package com.lohika.seleniumtool;
 
-import java.util.concurrent.TimeUnit;
+import java.net.URL;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.PageFactory;
 
-public class LoginTest extends BaseTest{
+import pages.LoginPage;
+import pages.MailPage;
+
+public class LoginTest {
 	
-	@BeforeSuite 
-	public void setupTests(){
-		config = new Config(configURL);
-	}
-	
-	@BeforeTest
-	public void initDriver(){
-		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get(config.url);
-	}
-	
-	@AfterTest
-	public void closeDriver(){
-		driver.close();
-	}
+	private Logger logger = LoggerFactory.getLogger(LoginTest.class);
 	
 	@Test
-	public void possitiveLoginTest() {
+	public void testCorrectLogin() throws Exception{
+		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+		WebDriver driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), capabilities);
+		
+		logger.info("Opening Outlook page");
+		driver.get("http://www.outlook.com/");
 		
 		LoginPage loginPage = new LoginPage();
-		
 		PageFactory.initElements(driver, loginPage);
 		
-		loginPage.username.sendKeys(config.name);
-		
-		loginPage.password.sendKeys(config.pass);
-		
-		loginPage.loginButton.click();
-		
-		Assert.assertTrue(driver.findElement(By.xpath("//*[@id='c_meun' and text()='Test Me9']")).isDisplayed(), "Test case failed");
-
+		logger.info("Loging in");
+		loginPage.username.sendKeys("svyatest9@hotmail.com");
+         
+        loginPage.password.sendKeys("skypet3st3r");
+         
+        loginPage.loginButton.click();
+         
+        MailPage mailPage = new MailPage();
+        PageFactory.initElements(driver, mailPage);
+        
+        logger.info("Check if page is displayed");
+        Assert.assertTrue(mailPage.isDisplayed(), "Mail Page was not visible"); 
+        
+        driver.quit();
 	}
-	
+
 }

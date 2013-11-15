@@ -1,5 +1,0 @@
-Login = ******
-
-Password = ******
-
-URL = https://www.outlook.com/

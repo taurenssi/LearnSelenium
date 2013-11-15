@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+  
+<suite name="Suite">
+  <test name="All" >
+    <classes>
+       <class name="com.lohika.seleniumtool.LoginTest" />
+    </classes>
+  </test>
+</suite>
