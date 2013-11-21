@@ -8,7 +8,7 @@ public class MailPage {
 	@FindBy (id = "contentFolderQuickViewList")
 	public WebElement contentFolder;
 	
-	@FindBy (id = "c_hiconm")
+	@FindBy (xpath = "//a[@id = 'c_hiconm' and not(contains(@class, 'c_md'))]")
 	public WebElement messagingIcon;
 	
 	@FindBy (id = "sidebar")

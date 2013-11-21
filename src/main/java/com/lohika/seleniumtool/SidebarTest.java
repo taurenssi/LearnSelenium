@@ -1,6 +1,7 @@
 package com.lohika.seleniumtool;
 
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +26,7 @@ private Logger logger = LoggerFactory.getLogger(LoginTest.class);
 		
 		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		WebDriver driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), capabilities);
-		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		logger.info("Opening Outlook page");
 		driver.get("http://www.outlook.com/");
 		
@@ -55,7 +56,7 @@ private Logger logger = LoggerFactory.getLogger(LoginTest.class);
         PageFactory.initElements(driver, mailPage);
         
         logger.info("Check if contact is found");
-        Assert.assertTrue(!mailPage.contactSearchInfoBar.isDisplayed(), "Contact 'Svyatoslav Saliy' wasn't found!");
+        Assert.assertTrue(mailPage.contactSearchInfoBar.isDisplayed(), "Contact wasn't found!");
         
         logger.info("Opening conversation with contact");
         for (WebElement element: mailPage.contactSearchResult){
