@@ -1,35 +1,20 @@
 package pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class MailPage {
+public class MailPage extends BasePage {
+	
+	public MailPage(WebDriver driver){
+		this.driver = driver;
+	}
 
 	@FindBy (id = "contentFolderQuickViewList")
 	public WebElement contentFolder;
 	
 	@FindBy (xpath = "//a[@id = 'c_hiconm' and not(contains(@class, 'c_md'))]")
 	public WebElement messagingIcon;
-	
-	@FindBy (id = "sidebar")
-	public WebElement sidebar;
-	
-	@FindBy (id = "search_filter")
-	public WebElement searchField;
-	
-	@FindBy (xpath = "//*[@class='ContactSearchResult']")
-	public WebElement contactSearchResultsList;
-	
-	@FindBy (xpath = "//*[@class='t_mbgc t_amtc csIcWrap']")
-	public WebElement[] contactSearchResult;
-
-	@FindBy (xpath = "//*[@class='contactSearchInfoBar']")
-	public WebElement contactSearchInfoBar;
-	
-	@FindBy (xpath = "//*[@class='Title']")
-	public WebElement conversationTitle;
-
-	
 	
 	public boolean isDisplayed(){
 		return contentFolder.isDisplayed();

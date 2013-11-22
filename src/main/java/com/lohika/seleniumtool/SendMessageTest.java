@@ -22,10 +22,8 @@ private Logger logger = LoggerFactory.getLogger(SendMessageTest.class);
 		
 		String searchName = "svyattest2@hotmail.com";
 		
-		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-		WebDriver driverA = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), capabilities);
-		
 		logger.info("Opening Outlook page for User A");
+		Object driverA;
 		driverA.get("http://www.outlook.com/");
 		
 		LoginPage loginPageA = new LoginPage();
