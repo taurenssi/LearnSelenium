@@ -1,16 +1,16 @@
 package com.lohika.seleniumtool.sidebartests;
 
-import java.util.concurrent.TimeUnit;
-
+import com.lohika.seleniumtool.DoubleDriverBaseTest;
+import com.lohika.seleniumtool.pages.ConversationPage;
+import com.lohika.seleniumtool.pages.LoginPage;
+import com.lohika.seleniumtool.pages.MessengerPage;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.PageFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.lohika.seleniumtool.DoubleDriverBaseTest;
-import com.lohika.seleniumtool.pages.*;
+import java.util.concurrent.TimeUnit;
 
 public class SendMessagerConversationIsOpenedTest extends DoubleDriverBaseTest{
 private Logger logger = LoggerFactory.getLogger(SendMessagerConversationIsOpenedTest.class);
@@ -25,8 +25,7 @@ private Logger logger = LoggerFactory.getLogger(SendMessagerConversationIsOpened
 		driver.get("http://www.outlook.com/");
 		
 		LoginPage loginPageA = new LoginPage(driver);
-		PageFactory.initElements(driver, loginPageA);
-		
+
 		logger.info("Loging in");
 		loginPageA.username.sendKeys(userAName);
          
@@ -35,9 +34,8 @@ private Logger logger = LoggerFactory.getLogger(SendMessagerConversationIsOpened
         loginPageA.loginButton.click();
         
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        MessengerPage messengerPageA = new MessengerPage();
-        PageFactory.initElements(driver, messengerPageA);      
-        
+        MessengerPage messengerPageA = new MessengerPage(driver);
+
         logger.info("Opening sidebar");
         messengerPageA.messagingIcon.click();
         
@@ -54,8 +52,7 @@ private Logger logger = LoggerFactory.getLogger(SendMessagerConversationIsOpened
         messengerPageA.contactSearchResult.click();
         
         ConversationPage conversationPageA = new ConversationPage(driver);
-        PageFactory.initElements(driver, conversationPageA);
-        
+
         logger.info("Check if conversation with " + userBName + " is opened");
         conversationPageA.assertName("claus Claus");
         
@@ -63,8 +60,7 @@ private Logger logger = LoggerFactory.getLogger(SendMessagerConversationIsOpened
 		driver2.get("http://www.outlook.com/");
 		
 		LoginPage loginPageB = new LoginPage(driver2);
-		PageFactory.initElements(driver2, loginPageB);
-		
+
 		logger.info("Loging in");
 		loginPageB.username.sendKeys(userBName);
          
@@ -73,9 +69,8 @@ private Logger logger = LoggerFactory.getLogger(SendMessagerConversationIsOpened
         loginPageB.loginButton.click();
         
         driver2.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        MessengerPage messengerPageB = new MessengerPage();
-        PageFactory.initElements(driver2, messengerPageB);      
-        
+        MessengerPage messengerPageB = new MessengerPage(driver);
+
         logger.info("Opening sidebar");
         messengerPageB.messagingIcon.click();
         
@@ -92,8 +87,7 @@ private Logger logger = LoggerFactory.getLogger(SendMessagerConversationIsOpened
         messengerPageB.contactSearchResult.click();
         
         ConversationPage conversationPageB = new ConversationPage(driver2);
-        PageFactory.initElements(driver2, conversationPageB);
-        
+
         logger.info("Check if conversation with " + userAName + " is opened");
         conversationPageB.assertName("زمانی ئوردی و زمانی کوردی. ئەلفوبێی");
         

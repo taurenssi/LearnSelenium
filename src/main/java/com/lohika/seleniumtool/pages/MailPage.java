@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class MailPage extends BasePage {
 	
 	public MailPage(WebDriver driver){
-		this.driver = driver;
+        super(driver);
 	}
 
 	@FindBy (id = "contentFolderQuickViewList")
@@ -16,7 +16,8 @@ public class MailPage extends BasePage {
 	@FindBy (xpath = "//a[@id = 'c_hiconm' and not(contains(@class, 'c_md'))]")
 	public WebElement messagingIcon;
 	
-	@FindBy (xpath = "//img[@class = 'is_img' and @alt = 'All services']")
+	//@FindBy (xpath = "//img[@class = 'is_img' and @alt = 'All services']")
+	@FindBy (xpath="//a[@id='c_clogoc']")
 	public WebElement servicesMenu;
 	
 	@FindBy (id = "c_h_ppl")

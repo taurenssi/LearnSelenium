@@ -1,17 +1,15 @@
 package com.lohika.seleniumtool.sidebartests;
 
-import java.util.concurrent.TimeUnit;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.testng.Assert;
-import org.testng.annotations.*;
-import org.openqa.selenium.support.PageFactory;
-
 import com.lohika.seleniumtool.SingleDriverBaseTest;
 import com.lohika.seleniumtool.pages.LoginPage;
 import com.lohika.seleniumtool.pages.MailPage;
 import com.lohika.seleniumtool.pages.SidebarPage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import java.util.concurrent.TimeUnit;
 
 public class SidebarSearchNoResultsTest extends SingleDriverBaseTest{
 	
@@ -27,14 +25,12 @@ public class SidebarSearchNoResultsTest extends SingleDriverBaseTest{
 		driver.get("http://www.outlook.com/");
 		
 		LoginPage loginPage = new LoginPage(driver);
-		PageFactory.initElements(driver, loginPage);
-		
+
     	logger.info("Loging in");
     	loginPage.login();
          
         MailPage mailPage = new MailPage(driver);
-        PageFactory.initElements(driver, mailPage);
-        
+
         logger.info("Check if user is logged in");
         Assert.assertTrue(mailPage.isDisplayed(), "User was not logged in");
             
@@ -42,8 +38,7 @@ public class SidebarSearchNoResultsTest extends SingleDriverBaseTest{
         mailPage.messagingIcon.click();
         
         SidebarPage sidebarPage = new SidebarPage(driver);
-        PageFactory.initElements(driver, sidebarPage);
-        
+
         logger.info("Check if sidebar is opened");
         Assert.assertTrue(sidebarPage.isDisplayed(), "Sidebar was not visible");
         

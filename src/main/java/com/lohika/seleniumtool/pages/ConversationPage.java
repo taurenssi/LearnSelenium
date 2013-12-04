@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 public class ConversationPage extends BasePage {
 	
 	public ConversationPage(WebDriver driver){
-		this.driver = driver;
+		super(driver);
 	}
 	
 	@FindBy (xpath = "//h1[@class='Title']")

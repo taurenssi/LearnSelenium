@@ -10,7 +10,7 @@ public class LoginPage extends BasePage {
 	private String pass = "skypet3st3r";
 	
 	public LoginPage(WebDriver driver){
-		this.driver = driver;
+        super(driver);
 	}
 
     @FindBy (name = "login")

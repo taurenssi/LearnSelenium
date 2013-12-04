@@ -1,14 +1,12 @@
 package com.lohika.seleniumtool.loginandregistrationtests;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.testng.Assert;
-import org.testng.annotations.*;
-import org.openqa.selenium.support.PageFactory;
-
 import com.lohika.seleniumtool.SingleDriverBaseTest;
 import com.lohika.seleniumtool.pages.LoginPage;
 import com.lohika.seleniumtool.pages.MailPage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class LoginTest extends SingleDriverBaseTest{
 
@@ -24,8 +22,7 @@ public class LoginTest extends SingleDriverBaseTest{
 		driver.get("http://www.outlook.com/");
 		
 		LoginPage loginPage = new LoginPage(driver);
-		PageFactory.initElements(driver, loginPage);
-		
+
 		logger.info("Loging in");
 		loginPage.username.sendKeys(validName);
          
@@ -34,8 +31,7 @@ public class LoginTest extends SingleDriverBaseTest{
         loginPage.loginButton.click();
          
         MailPage mailPage = new MailPage(driver);
-        PageFactory.initElements(driver, mailPage);
-        
+
         logger.info("Check if page is displayed");
         Assert.assertTrue(mailPage.isDisplayed(), "Mail Page was not visible"); 
 	}
