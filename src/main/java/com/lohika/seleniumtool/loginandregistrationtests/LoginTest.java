@@ -1,4 +1,4 @@
-package com.lohika.seleniumtool;
+package com.lohika.seleniumtool.loginandregistrationtests;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,8 +6,9 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import org.openqa.selenium.support.PageFactory;
 
-import pages.LoginPage;
-import pages.MailPage;
+import com.lohika.seleniumtool.SingleDriverBaseTest;
+import com.lohika.seleniumtool.pages.LoginPage;
+import com.lohika.seleniumtool.pages.MailPage;
 
 public class LoginTest extends SingleDriverBaseTest{
 

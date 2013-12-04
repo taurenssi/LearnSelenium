@@ -4,9 +4,6 @@
   <test name="All" >
     <classes>
        <class name="com.lohika.seleniumtool.LoginTest">
-       	  <methods>
-        		<include name="testCorrectLogin" />
-      	  </methods>
        </class>
        <class name="com.lohika.seleniumtool.SidebarTest">
        	  <methods>
@@ -14,6 +11,7 @@
         		<include name="searchNoResultsTest" />
       	  </methods>
        </class>
+       <class name="com.lohika.seleniumtool.SendMessageTest" />
     </classes>
   </test>
 </suite>

@@ -1,4 +1,4 @@
-package com.lohika.seleniumtool;
+package com.lohika.seleniumtool.sidebartests;
 
 import java.util.concurrent.TimeUnit;
 
@@ -8,14 +8,15 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import org.openqa.selenium.support.PageFactory;
 
-import pages.ConversationPage;
-import pages.LoginPage;
-import pages.MailPage;
-import pages.SidebarPage;
+import com.lohika.seleniumtool.SingleDriverBaseTest;
+import com.lohika.seleniumtool.pages.ConversationPage;
+import com.lohika.seleniumtool.pages.LoginPage;
+import com.lohika.seleniumtool.pages.MailPage;
+import com.lohika.seleniumtool.pages.SidebarPage;
 
-public class SidebarTest extends SingleDriverBaseTest{
+public class OpenConversationFromSidebarTest extends SingleDriverBaseTest{
 	
-	private Logger logger = LoggerFactory.getLogger(SidebarTest.class);
+	private Logger logger = LoggerFactory.getLogger(OpenConversationFromSidebarTest.class);
 	
 	private String validSearchName = "skypeqa011";
 	private String invalidSearchName = "Tester";
