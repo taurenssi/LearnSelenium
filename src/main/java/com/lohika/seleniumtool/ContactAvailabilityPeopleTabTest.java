@@ -8,10 +8,11 @@ import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import pages.ConversationPage;
-import pages.LoginPage;
-import pages.MailPage;
-import pages.PeoplePage;
+import com.lohika.seleniumtool.pages.PeoplePage;
+
+import com.lohika.seleniumtool.pages.ConversationPage;
+import com.lohika.seleniumtool.pages.LoginPage;
+import com.lohika.seleniumtool.pages.MailPage;
 
 public class ContactAvailabilityPeopleTabTest extends SingleDriverBaseTest {
 	private Logger logger = LoggerFactory.getLogger(ContactAvailabilityPeopleTabTest.class);

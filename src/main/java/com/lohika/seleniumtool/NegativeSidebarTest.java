@@ -8,9 +8,9 @@ import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import pages.LoginPage;
-import pages.MailPage;
-import pages.SidebarPage;
+import com.lohika.seleniumtool.pages.LoginPage;
+import com.lohika.seleniumtool.pages.MailPage;
+import com.lohika.seleniumtool.pages.SidebarPage;
 
 public class NegativeSidebarTest  extends SingleDriverBaseTest{
 	

@@ -8,10 +8,10 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import org.openqa.selenium.support.PageFactory;
 
-import pages.ConversationPage;
-import pages.LoginPage;
-import pages.MailPage;
-import pages.SidebarPage;
+import com.lohika.seleniumtool.pages.ConversationPage;
+import com.lohika.seleniumtool.pages.LoginPage;
+import com.lohika.seleniumtool.pages.MailPage;
+import com.lohika.seleniumtool.pages.SidebarPage;
 
 public class PossitiveSidebarTest extends SingleDriverBaseTest{
 	
