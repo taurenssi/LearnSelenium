@@ -3,6 +3,7 @@
 <suite name="Suite">
   <test name="All" >
     <classes>
+<<<<<<< HEAD
        <class name="com.lohika.seleniumtool.LoginTest">
        </class>
        <class name="com.lohika.seleniumtool.SidebarTest">
@@ -12,6 +13,11 @@
       	  </methods>
        </class>
        <class name="com.lohika.seleniumtool.SendMessageTest" />
+=======
+       <class name="com.lohika.seleniumtool.LoginTest"></class>
+       <class name="com.lohika.seleniumtool.PossitiveSidebarTest"></class>
+       <class name="com.lohika.seleniumtool.NegativeSidebarTest"></class>
+>>>>>>> refs/remotes/origin/master
     </classes>
   </test>
 </suite>
