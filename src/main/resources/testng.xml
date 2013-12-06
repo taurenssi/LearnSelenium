@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+  
+<suite name="Suite">
+
+  <test name="All" >
+      <parameter name="param1" value="1" />
+      <parameter name="param2" value="2" />
+    <classes>
+       <class name="com.lohika.seleniumtool.ContactAvailabilityPeopleTabTest"></class>
+       <class name="com.lohika.seleniumtool.loginandregistrationtests.LoginTest"></class>
+    </classes>
+  </test>
+</suite>

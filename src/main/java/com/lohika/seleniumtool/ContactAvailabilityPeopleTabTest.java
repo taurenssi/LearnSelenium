@@ -11,6 +11,8 @@ import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
@@ -19,10 +21,13 @@ public class ContactAvailabilityPeopleTabTest extends SingleDriverBaseTest {
 	private Logger logger = LoggerFactory.getLogger(ContactAvailabilityPeopleTabTest.class);
 	
 	private String validContactName = "skypeqa011";
-	
+
 	@Test
-	public void contactAvailabilityOnPeopleTabTest() throws Exception{
+    @Parameters({ "param2", "param1" })
+	public void contactAvailabilityOnPeopleTabTest(@Optional("111") String p1, @Optional("111") String p2) throws Exception{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+        logger.info(p1);
 
 		logger.info("Opening Outlook page");
 		driver.get("http://www.outlook.com/");

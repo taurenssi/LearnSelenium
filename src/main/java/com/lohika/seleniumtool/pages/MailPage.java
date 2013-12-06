@@ -3,8 +3,11 @@ package com.lohika.seleniumtool.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MailPage extends BasePage {
+    private Logger logger = LoggerFactory.getLogger(MailPage.class);
 	
 	public MailPage(WebDriver driver){
         super(driver);
@@ -24,6 +27,7 @@ public class MailPage extends BasePage {
 	public WebElement peopleHeaderItem;
 	
 	public boolean isDisplayed(){
-		return contentFolder.isDisplayed();
+        logger.info("Check if page " + getClass().getSimpleName() + " is displayed");
+        return contentFolder.isDisplayed();
 	}
 }

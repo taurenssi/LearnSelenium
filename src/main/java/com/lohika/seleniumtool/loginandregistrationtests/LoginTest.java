@@ -17,6 +17,7 @@ public class LoginTest extends SingleDriverBaseTest{
 	
 	@Test
 	public void testCorrectLogin() throws Exception{
+        //MDC.put("tcid", getClass().getSimpleName());
 
 		logger.info("Opening Outlook page");
 		driver.get("http://www.outlook.com/");
