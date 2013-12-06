@@ -64,8 +64,6 @@ public class ContactAvailabilityPeopleTabTest extends SingleDriverBaseTest {
             Thread.sleep(1000);
         }
 
-        Web e = Tools.aseertVisible(By.xpath());
-
         mailPage.servicesMenu.click();
         mailPage.peopleHeaderItem.click();
         
