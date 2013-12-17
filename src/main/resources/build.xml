@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Testing" default="target-name" basedir=".">
+    
+    <taskdef resource="testngtasks" classpath="seleniumtool-jar-with-dependencies.jar"/>
+
+    <target name="target-name" description="Regression Tests">
+        <testng testJar="seleniumtool-jar-with-dependencies.jar" 
+                classpath="seleniumtool-jar-with-dependencies.jar" 
+                outputDir="report" 
+                useDefaultListeners="false">
+
+            <xmlfileset dir="." includes="testng.xml"/>
+        </testng>
+    </target>
+
+</project>
