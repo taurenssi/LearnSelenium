@@ -41,8 +41,8 @@ public class DoubleTestListener implements ITestListener{
 		outputDir = outputDir.substring(0, outputDir.lastIndexOf(File.separatorChar));
 		
         outputDir += File.separatorChar + "report";
-		File saved1 = new File(outputDir + "." + File.separatorChar + "screenshot_driver1_" + result.getMethod().getMethodName() + (new Date().getTime()) + ".png");
-		File saved2 = new File(outputDir + "." + File.separatorChar + "screenshot_driver2_" + result.getMethod().getMethodName() + (new Date().getTime()) + ".png");
+		File saved1 = new File(outputDir + File.separatorChar + "screenshot_driver1_" + result.getMethod().getMethodName() + (new Date().getTime()) + ".png");
+		File saved2 = new File(outputDir + File.separatorChar + "screenshot_driver2_" + result.getMethod().getMethodName() + (new Date().getTime()) + ".png");
 		
         try {
             FileUtils.copyFile(f1, saved1);

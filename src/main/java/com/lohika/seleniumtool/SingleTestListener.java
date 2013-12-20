@@ -36,13 +36,14 @@ public class SingleTestListener implements ITestListener {
 		
 		String outputDir = result.getTestContext().getOutputDirectory();
 		
-		System.out.println(outputDir);
-		
+		//System.out.println(outputDir);
 		outputDir = outputDir.substring(0, outputDir.lastIndexOf(File.separatorChar));
+		//System.out.println(outputDir);
 		outputDir = outputDir.substring(0, outputDir.lastIndexOf(File.separatorChar));
-		
+		//System.out.println(outputDir);
         outputDir += File.separatorChar + "report";
-		File saved = new File(outputDir + "." + File.separatorChar + "screenshot_" + result.getMethod().getMethodName() + (new Date().getTime()) + ".png");
+        //System.out.println(outputDir);
+		File saved = new File(outputDir + File.separatorChar + "screenshot_" + result.getMethod().getMethodName() + (new Date().getTime()) + ".png");
 		
         try {
             FileUtils.copyFile(f, saved);
