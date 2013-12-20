@@ -1,4 +1,0 @@
-2013-12-20 11:10:50,316 INFO c.l.s.l.LoginTest - Opening Outlook page
-2013-12-20 11:10:54,457 INFO c.l.s.l.LoginTest - Loging in
-2013-12-20 11:10:56,963 INFO c.l.s.l.LoginTest - Check if page is displayed
-2013-12-20 11:10:56,963 INFO c.l.seleniumtool.pages.MailPage - Check if page MailPage is displayed
