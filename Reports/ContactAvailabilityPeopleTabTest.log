@@ -1,0 +1,9 @@
+2013-12-20 11:44:02,012 INFO c.l.s.ContactAvailabilityPeopleTabTest - 2
+2013-12-20 11:44:02,155 INFO c.l.s.ContactAvailabilityPeopleTabTest - Opening Outlook page
+2013-12-20 11:44:05,604 INFO c.l.s.ContactAvailabilityPeopleTabTest - Loging in
+2013-12-20 11:44:07,995 INFO c.l.s.ContactAvailabilityPeopleTabTest - Check if user is logged in
+2013-12-20 11:44:07,995 INFO c.l.seleniumtool.pages.MailPage - Check if page MailPage is displayed
+2013-12-20 11:44:12,986 INFO c.l.s.ContactAvailabilityPeopleTabTest - Opening People Tab
+2013-12-20 11:44:37,146 INFO c.l.s.ContactAvailabilityPeopleTabTest - Check if people page is opened
+2013-12-20 11:44:42,050 INFO c.l.s.ContactAvailabilityPeopleTabTest - Looking for 'skypeqa011' contact
+2013-12-20 11:44:42,591 INFO c.l.s.ContactAvailabilityPeopleTabTest - Check if contact is found

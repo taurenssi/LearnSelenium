@@ -15,8 +15,6 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
-
 public class ContactAvailabilityPeopleTabTest extends SingleDriverBaseTest {
 	private Logger logger = LoggerFactory.getLogger(ContactAvailabilityPeopleTabTest.class);
 	
@@ -25,8 +23,6 @@ public class ContactAvailabilityPeopleTabTest extends SingleDriverBaseTest {
 	@Test
     @Parameters({ "param2", "param1" })
 	public void contactAvailabilityOnPeopleTabTest(@Optional("111") String p1, @Optional("111") String p2) throws Exception{
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
         logger.info(p1);
 
 		logger.info("Opening Outlook page");

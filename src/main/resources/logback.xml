@@ -12,7 +12,7 @@
         </discriminator>
         <sift>
             <appender name="FILE-${tcid}" class="ch.qos.logback.core.FileAppender">
-                <file>Reports/${tcid}.log</file>
+                <file>report/${tcid}.log</file>
                 <append>false</append>
                 <layout class="ch.qos.logback.classic.PatternLayout">
                     <pattern>%d %level %logger{35} - %msg%n</pattern>
