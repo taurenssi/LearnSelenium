@@ -44,7 +44,7 @@ public class ContactAvailabilityPeopleTabTest extends SingleDriverBaseTest {
         //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@id='c_clogoc']//img")));
 
         int tries = 0;
-        long timeout = System.currentTimeMillis() + 20000;
+        long timeout = System.currentTimeMillis() + 10000;
         while (System.currentTimeMillis() < timeout) {
             WebElement e = driver.findElement(By.xpath("//a[@id='c_clogoc']//img"));
             try {
@@ -88,12 +88,12 @@ public class ContactAvailabilityPeopleTabTest extends SingleDriverBaseTest {
         logger.info("Check if contact profile view is opened");
         Assert.assertTrue(peoplePage.contactDetailsView.isDisplayed(), "Contact profile view wasn't opened!");
         
-        logger.info("Opening conversation with contact");
+        /*logger.info("Opening conversation with contact");
         peoplePage.sendMessageButton.click();
         
         ConversationPage conversationPage = new ConversationPage(driver);
 
         logger.info("Check if conversation with " + validContactName + " is opened");
-        conversationPage.assertName(validContactName);
+        conversationPage.assertName(validContactName);*/
 	}
 }

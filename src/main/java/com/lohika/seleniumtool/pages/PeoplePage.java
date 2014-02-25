@@ -24,10 +24,10 @@ public class PeoplePage extends BasePage{
 	@FindBy (xpath = "//*[@class = 'CP_ViewDetails']")
 	public WebElement contactDetailsView;
 	
-	@FindBy (xpath = "//*[@class = 'CP_SelectionCommandButton' and contains(text(), 'Send message']")
+	@FindBy (xpath = "//*[@class = 'CP_SelectionCommandButton' and text() = 'Send message']")
 	public WebElement sendMessageButton;
 	
-	@FindBy (xpath = "//*[@class = 'CP_SelectionCommandButton' and contains(text(), 'Send message']//*[@class = 'CP_Scb_value']")
+	@FindBy (xpath = "//*[@class = 'CP_SelectionCommandButton' and text() = 'Send message']//*[@class = 'CP_Scb_value']")
 	public WebElement sendMessageValue;
 	
 	@Override
@@ -36,13 +36,9 @@ public class PeoplePage extends BasePage{
 	}
 	
 	public WebElement getContactFromSearchResult(String match) throws InterruptedException {
-        /*WebDriverWait wait = new WebDriverWait(driver, 10);
-        WebElement e = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//div[@class='CL_Display_Name' and text()='" + match + "']/parent::div/parent::li")));
-        Thread.sleep(2000);*/
 
-        //driver.findElement(By.xpath("//div[@class='CL_Display_Name']/strong[text()='" + match + "']")).click();
-
+		Thread.sleep(1000);
+		
         WebElement contact = null;
         contactSearchResult = driver.findElements(By.xpath("/*//*[@class='CL_Contact']"));
 		for (WebElement element: contactSearchResult){
@@ -53,6 +49,5 @@ public class PeoplePage extends BasePage{
         	}
         }
 		return contact;
-
 	}
 }

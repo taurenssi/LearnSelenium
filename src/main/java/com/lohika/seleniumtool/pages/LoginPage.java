@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class LoginPage extends BasePage {
 	
 	private String name = "svyatest9@hotmail.com";
-	private String pass = "skypet3st3r";
+	private String pass = "*********";
 	
 	public LoginPage(WebDriver driver){
         super(driver);

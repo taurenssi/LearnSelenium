@@ -1,23 +1,23 @@
 package com.lohika.seleniumtool.loginandregistrationtests;
 
-import com.lohika.seleniumtool.SingleDriverBaseTest;
-import com.lohika.seleniumtool.pages.LoginPage;
-import com.lohika.seleniumtool.pages.MailPage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginTest extends SingleDriverBaseTest{
+import com.lohika.seleniumtool.SingleDriverBaseTest;
+import com.lohika.seleniumtool.pages.LoginPage;
+import com.lohika.seleniumtool.pages.MailPage;
 
-	private Logger logger = LoggerFactory.getLogger(LoginTest.class);
+public class LogoutTest extends SingleDriverBaseTest{
+	
+	private Logger logger = LoggerFactory.getLogger(LogoutTest.class);
 	
 	private String validName = "svyatest9@hotmail.com";
 	private String validPass = "*********";
 	
 	@Test
 	public void testCorrectLogin() throws Exception{
-        //MDC.put("tcid", getClass().getSimpleName());
 
 		logger.info("Opening Outlook page");
 		driver.get("http://www.outlook.com/");
@@ -35,5 +35,7 @@ public class LoginTest extends SingleDriverBaseTest{
 
         logger.info("Check if page is displayed");
         Assert.assertTrue(mailPage.isDisplayed(), "Mail Page was not visible"); 
+        
+        
 	}
 }
