@@ -15,7 +15,7 @@ public class PossitiveSidebarTest extends SingleDriverBaseTest{
 	
 	private Logger logger = LoggerFactory.getLogger(PossitiveSidebarTest.class);
 	
-	private String validSearchName = "skypeqa011";
+	private String validSearchName = "test";
 	
 	@Test
 	public void openConversationFromSidebarTest() throws Exception{
