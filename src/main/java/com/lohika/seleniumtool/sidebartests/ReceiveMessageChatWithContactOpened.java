@@ -17,7 +17,7 @@ public class ReceiveMessageChatWithContactOpened extends DoubleDriverBaseTest{
 	@Test
 	public void ReceiveMessageChatWithContactOpenedTest() throws Exception{
 			
-		String userAName = "svyattest2@hotmail.com";
+		String userAName = "test2@hotmail.com";
 		String userBName = "simon.test2@outlook.com";
 			
 		logger.info("Opening Outlook page for User A");
@@ -28,7 +28,7 @@ public class ReceiveMessageChatWithContactOpened extends DoubleDriverBaseTest{
 		logger.info("Loging in");
 		loginPageA.username.sendKeys(userAName);
 	         
-		loginPageA.password.sendKeys("skypet3st3r");
+		loginPageA.password.sendKeys("test");
 	         
 		loginPageA.loginButton.click();
 	        
