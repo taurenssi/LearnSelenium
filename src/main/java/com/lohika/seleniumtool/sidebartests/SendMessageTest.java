@@ -19,7 +19,7 @@ private Logger logger = LoggerFactory.getLogger(SendMessageTest.class);
 	@Test
 	public void OpenConversationFromSidebarTest() throws Exception{
 		
-		String userAName = "svyattest2@hotmail.com";
+		String userAName = "test2@hotmail.com";
 		String userBName = "simon.test2@outlook.com";
 		
 		logger.info("Opening Outlook page for User A");
@@ -30,7 +30,7 @@ private Logger logger = LoggerFactory.getLogger(SendMessageTest.class);
 		logger.info("Loging in");
 		loginPageA.username.sendKeys(userAName);
          
-        loginPageA.password.sendKeys("skypet3st3r");
+        loginPageA.password.sendKeys("test");
          
         loginPageA.loginButton.click();
         
