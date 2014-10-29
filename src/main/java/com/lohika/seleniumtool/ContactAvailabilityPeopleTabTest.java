@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 public class ContactAvailabilityPeopleTabTest extends SingleDriverBaseTest {
 	private Logger logger = LoggerFactory.getLogger(ContactAvailabilityPeopleTabTest.class);
 	
-	private String validContactName = "skypeqa011";
+	private String validContactName = "test";
 
 	@Test
     @Parameters({ "param2", "param1" })
