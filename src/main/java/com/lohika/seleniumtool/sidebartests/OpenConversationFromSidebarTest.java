@@ -16,7 +16,7 @@ public class OpenConversationFromSidebarTest extends SingleDriverBaseTest{
 	
 	private Logger logger = LoggerFactory.getLogger(OpenConversationFromSidebarTest.class);
 	
-	private String validSearchName = "skypeqa011";
+	private String validSearchName = "test";
 	private String invalidSearchName = "Tester";
 	
 	@Test
